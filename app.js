@@ -22,9 +22,9 @@ app.use(express.urlencoded());
 app.use(app.router); 
 app.use(express.static('public'));
 
+
 // Reads the routes
-require('./routes/original')(app);
-require('./routes/different')(app);
+require('./routes/index')(app);
 
 // Creates server
 http.createServer(app).listen(app.get('port'), function(){
